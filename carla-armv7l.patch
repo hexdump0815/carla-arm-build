@@ -1,0 +1,26 @@
+diff --git a/data/linux/build-deps.sh b/data/linux/build-deps.sh
+index 2f298832..7d637e41 100755
+--- a/data/linux/build-deps.sh
++++ b/data/linux/build-deps.sh
+@@ -50,7 +50,7 @@ export PREFIX=${TARGETDIR}/carla${ARCH}
+ export PATH=${PREFIX}/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+ export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
+ 
+-export CFLAGS="-O3 -mtune=generic -msse -msse2 -mfpmath=sse -fvisibility=hidden -fdata-sections -ffunction-sections"
++export CFLAGS="-O3 -march=armv7 -mfpu=neon -fvisibility=hidden -fdata-sections -ffunction-sections"
+ export CFLAGS="${CFLAGS} -fPIC -DPIC -DNDEBUG -I${PREFIX}/include -m${ARCH}"
+ export CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+ 
+diff --git a/source/Makefile.mk b/source/Makefile.mk
+index 32d7e29e..cbc8da3a 100644
+--- a/source/Makefile.mk
++++ b/source/Makefile.mk
+@@ -103,7 +103,7 @@ endif
+ # Set build and link flags
+ 
+ BASE_FLAGS = -Wall -Wextra -pipe -DBUILDING_CARLA -DREAL_BUILD -MD -MP
+-BASE_OPTS  = -O3 -ffast-math -mtune=generic -msse -msse2 -mfpmath=sse -fdata-sections -ffunction-sections
++BASE_OPTS  = -O3 -ffast-math -march=armv7 -mfpu=neon -fdata-sections -ffunction-sections
+ 
+ ifeq ($(MACOS),true)
+ # MacOS linker flags
