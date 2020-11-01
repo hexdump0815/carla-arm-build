@@ -7,7 +7,7 @@ apt-get install libsndfile1-dev libavcodec-dev libavformat-dev
 # get the sources
 git clone https://github.com/falkTX/Carla.git
 cd Carla
-git checkout v2.1
+git checkout v2.2.0
 
 # patches required: cpu specific cc options for armhf or arm64
 #patch -p1 < /compile/doc/carla/carla-armv7l.patch
@@ -23,8 +23,9 @@ make
 make install
 
 # tar
-#tar cvzf /tmp/carla-2.1.0.armv7l.tar.gz /usr/local/lib/carla /usr/local/lib/pkgconfig/carla* /usr/local/lib/vst/carla.vst /usr/local/lib/lv2/carla.lv2 /usr/local/bin/carla* /usr/local/share/mime/packages/carla.xml /usr/local/share/carla /usr/local/share/applications/carla* /usr/local/share/icons/hicolor/*/apps/carla* /usr/local/include/carla
-#tar cvzf /tmp/carla-2.1.0.aarch64.tar.gz /usr/local/lib/carla /usr/local/lib/pkgconfig/carla* /usr/local/lib/vst/carla.vst /usr/local/lib/lv2/carla.lv2 /usr/local/bin/carla* /usr/local/share/mime/packages/carla.xml /usr/local/share/carla /usr/local/share/applications/carla* /usr/local/share/icons/hicolor/*/apps/carla* /usr/local/include/carla
+#tar cvzf /tmp/carla-2.2.0.armv7l.tar.gz /usr/local/lib/carla /usr/local/lib/pkgconfig/carla* /usr/local/lib/vst/carla.vst /usr/local/lib/lv2/carla.lv2 /usr/local/bin/carla* /usr/local/share/mime/packages/carla.xml /usr/local/share/carla /usr/local/share/applications/carla* /usr/local/share/icons/hicolor/*/apps/carla* /usr/local/include/carla
+#tar cvzf /tmp/carla-2.2.0.aarch64.tar.gz /usr/local/lib/carla /usr/local/lib/pkgconfig/carla* /usr/local/lib/vst/carla.vst /usr/local/lib/lv2/carla.lv2 /usr/local/bin/carla* /usr/local/share/mime/packages/carla.xml /usr/local/share/carla /usr/local/share/applications/carla* /usr/local/share/icons/hicolor/*/apps/carla* /usr/local/include/carla
+#tar cvzf /tmp/carla-2.2.0.x86_64.tar.gz /usr/local/lib/carla /usr/local/lib/pkgconfig/carla* /usr/local/lib/vst/carla.vst /usr/local/lib/lv2/carla.lv2 /usr/local/bin/carla* /usr/local/share/mime/packages/carla.xml /usr/local/share/carla /usr/local/share/applications/carla* /usr/local/share/icons/hicolor/*/apps/carla* /usr/local/include/carla
 
 # running carla
 it requires
