@@ -30,6 +30,6 @@ make install
 # running carla
 it requires
 
-apt-get install python3-pyqt5 python3-pyqt5.qtsvg
+apt-get install python3-pyqt5 python3-pyqt5.qtsvg libfluidsynth1
 
 to run
